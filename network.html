@@ -1,25 +1,106 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./network.css">
+</head>
+
+<body>
     <header>
 
     </header>
     <main>
-        <section class="network-section">
-            <h1 class="network-section__title">
+        <section class="network-main-section">
+            <div class="container">
+                <div class="row network-container__row">
+                    <div class="col-12 ">
+                        <h1 class="network-section__title">
+                            Find the best employee
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid filter-container">
+                <div class="row network-section__filter-container">
+                    <div class="col-12">
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                        </svg>
+                        Filter</h4>
+                    </div>
+                    <div class="col-2">
 
-            </h1>
+                        <select class="form-select network-section__filter" id='location-select'
+                            aria-label="size 3 select example">
+                            <option selected disabled class="network-section__filter--disabled-option">Select Location
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select class="form-select network-section__filter"
+                            id='position-select' aria-label="size 3 select example">
+                            <option selected disabled class="network-section__filter--disabled-option">Select Position
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select class="form-select network-section__filter"
+                            id='job-type-select' aria-label="size 3 select example">
+                            <option selected disabled class="network-section__filter--disabled-option">Select Job type
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select class="form-select network-section__filter"
+                            id='experience-select' aria-label="size 3 select example">
+                            <option selected disabled class="network-section__filter--disabled-option">Select Experience
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select class="form-select network-section__filter"
+                            id='education-select' aria-label="size 3 select example">
+                            <option selected disabled class="network-section__filter--disabled-option">Select Education
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-2 filter-btn-container">
+                        <button type="button" class="btn btn-light filter-btn">Apply filters</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
