@@ -1,3 +1,4 @@
-const array = document.querySelectorAll('.network-section__title');
-console.log(array);
+const users = []
+
+console.log(users);
 
