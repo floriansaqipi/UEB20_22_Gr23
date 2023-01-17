@@ -420,7 +420,8 @@
   
 <script>
   function myFunction() {
-    alert("Thanks for your review");
+    document.getElementById("result").innerHTML="Thanks for your review!";
+    event. preventDefault();
   }
   </script>
 <div class="container">
@@ -471,6 +472,7 @@
     </div>
   </fieldset>
   <button onclick="myFunction()" type="submit" class="btn btn-light">Submit review</button>
+  <p id="result"></p>
   </form>
 </section>
 </div>
