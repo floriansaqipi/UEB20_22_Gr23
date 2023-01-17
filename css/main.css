@@ -73,10 +73,7 @@ margin-left:20px;
   }
   /*main*/
  
-  .main{  
-   
-    background: url(../assets/photo1.jpeg) no-repeat;
-  }
+
   .main h1{
 
     color:black;
@@ -180,19 +177,19 @@ margin-left:20px;
 }
 
 .card .img-one{
-  background-image: url(../assets/icon1.png);
+  background-image: url(../pictures/assets/icon1.png);
   background-repeat: no-repeat;
   margin-top: 40px;
   margin-left:50px;
 }
 .card .img-two{
-  background-image: url(../assets/icon2.png);
+  background-image: url(../pictures/assets/icon2.png);
   background-repeat: no-repeat;
   margin-top: 40px;
   margin-left:50px;
 }
 .card .img-three{
-  background-image: url(../assets/icon3.png);
+  background-image: url(../pictures/assets/icon3.png);
   background-repeat: no-repeat;
   margin-top: 30px;
   margin-left:50px;
@@ -263,7 +260,7 @@ font-family: inherit;
  
   transition: all 0.4s;
   padding:10px 50px;
-  margin-top:24px;
+
   margin-left: 30px;
   font-family: inherit;
   background-color: #ebebeb;
@@ -281,9 +278,13 @@ font-family: inherit;
   margin-top: 30px;
   background: rgb(139,202,204);
 background: linear-gradient(90deg, rgba(139,202,204,1) 0%, rgba(168,168,168,1) 100%);
+margin-top:15px;
 }
+
+
 /*footer*/
 .footer{
   background-color: #ccc;
+  margin-top:20px;
 
 }
