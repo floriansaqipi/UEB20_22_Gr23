@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+.network-main-section{
+    margin-top: 32px;
+}
+
+.network-section__title{
+    color: #6e6e6e;
+}
+
+.network-section__title::after{
+    font-size: 1.5rem;
+    font-weight: 300;
+    content: 'Everything by your fingertips!';
+}
+
+.filter-container{
+    margin: 1rem;
+    width: auto;
+}
+
+
+.network-section__filter-container{
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #fdfdfd;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.network-section__filter{
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    width: 100%;
+}
+
+.network-section__filter:hover,
+.network-section__filter:active{
+    background-color: #f6f6f6;
+}
+
+.network-section__filter--disabled-option{
+    display: none;
+}
+
+.filter-btn-container{
+    text-align: center;
+}
+
+.network-btn{
+    font-family: inherit;
+    background-color: #ebebeb;
+    color: #434343;
+    border: 2px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.network-btn:hover,
+.network-btn:active{
+    background-color: #ccc;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.employee-section{
+    margin-top: 2.5rem;
+}
+
+.images-container{
+    position: relative;
+    text-align: center;
+}
+
+.profile-image__container{
+    position: absolute;
+    bottom: -20%;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-image__container> img{
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.card__title{
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #6e6e6e;
+    font-weight: 600;
+}
+
+.card__sub-title{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6e6e6e;
+}
+
+.card__body{
+    padding-bottom: 0.3rem;
+    background: #fdfdfd;
+}
+
+.card-attributes{
+    text-align: center;
+}
+
+.card__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+
+.card__item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.2rem 0.2rem;
+    border: 2px solid #dbdbdb;
+    padding: 0.2rem 0.4rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%)
+}
+
+.card-buttons__container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.employee-section__card{
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+}
