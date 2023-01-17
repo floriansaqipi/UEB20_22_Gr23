@@ -13,7 +13,7 @@ const users = [
     { id: 12, name: 'Nikhil Duarte', location: 'Prishtine', position: 'Backend Developer', workEnviorment: 'Online', experience: 'Intern', education: 'High School', wallpaperSrc: './pictures/cover/5.jpg', profilePicSrc: './pictures/profile/6.jpg' },
 ]
 
-const stateUsers = [...users];
+let stateUsers = [...users];
 
 const cards = document.querySelectorAll(".employee-section__card");
 
@@ -34,7 +34,6 @@ const updateCardLocation = (cardListItem, location) => {
 }
 
 const updateCardWorkEnviornment = (cardListItem, workEnviorment) => {
-    console.log("cardLocation",cardListItem); 
     cardListItem.children[1].innerHTML = workEnviorment;
 }
 const updateCardExperience = (cardListItem, experience) => {
@@ -52,11 +51,122 @@ const updateCardAttributes = (cardList, location, workEnviorment, experience, ed
     updateCardEducation(cardList.children[0].children[0].children[3].children[0], education);
 }
 
-
-for (let i = 0; i < cards.length; i++) {
-    updateCardImage(cards[i].firstElementChild, users[i].wallpaperSrc, users[i].profilePicSrc);
-    updateCardName(cards[i].children[1], users[i].name);
-    updateCardPosition(cards[i].children[1], users[i].position);
-    updateCardAttributes(cards[i].children[2], users[i].location, users[i].workEnviorment, users[i].experience, users[i].education);
+updateCardId = (card, id) => {
+    card.lastElementChild.innerHTML = id;
 }
 
+// const tagCard = (card) => {
+//     card.classList.add('tagged');
+// }
+
+
+const render = () => {
+    for (let i = 0; i < stateUsers.length; i++) {
+        updateCardImage(cards[i].firstElementChild, stateUsers[i].wallpaperSrc, stateUsers[i].profilePicSrc);
+        updateCardName(cards[i].children[1], stateUsers[i].name);
+        updateCardPosition(cards[i].children[1], stateUsers[i].position);
+        updateCardAttributes(cards[i].children[2], stateUsers[i].location, stateUsers[i].workEnviorment, stateUsers[i].experience, stateUsers[i].education);
+        updateCardId(cards[i],stateUsers[i].id);
+    }
+}
+
+// const removeUnTagged = () => {
+//     cards.forEach(card => {
+//         if(!card.classList.contains('tagged')){
+//             card.remove();
+//         }
+//     })
+// }
+
+
+render();
+// removeUnTagged();
+
+
+
+let locationSelectVal; 
+let positionSelectVal; 
+let experienceSelectVal; 
+let workEnviornmentSelectVal; 
+let educationSelectVal; 
+
+const setSelectVals = () => {
+    locationSelectVal = document.getElementById('location-select').value;
+    positionSelectVal = document.getElementById('position-select').value;
+    workEnviornmentSelectVal = document.getElementById('job-type-select').value;
+    experienceSelectVal = document.getElementById('experience-select').value;
+    educationSelectVal = document.getElementById('education-select').value;
+
+}
+
+const removeNonState = () => {
+    cards.forEach(card => {
+        if(!stateUsers.find(user => user.id === +card.lastElementChild.innerHTML)){
+            if(card.parentElement.parentElement == null) {return;}
+            card.parentElement.parentElement.removeChild(card.parentElement);
+        }
+    })
+}
+
+
+const filterLocation = (location) => {
+    if(location == 'Select Location') {
+        return;
+    }
+    const temp = stateUsers.filter( user => location === user.location);
+    stateUsers = temp;
+    console.log(stateUsers);
+    removeNonState();
+}
+const filterPositon = (position) => {
+    if(position == 'Select Position') {
+        return;
+    }
+    const temp = stateUsers.filter( user => position === user.position);
+    stateUsers = temp;
+    removeNonState();
+
+}
+const filterWorkEnviornment = (env) => {
+    if(env == 'Select Job type') {
+        return;
+    }
+    const temp = stateUsers.filter( user => env === user.workEnviorment);
+    stateUsers = temp;
+    removeNonState();
+
+}
+const filterExperience = (experience) => {
+    if(experience == 'Select Experience') {
+        return;
+    }
+    const temp = stateUsers.filter( user => experience === user.experience);
+    stateUsers = temp;
+    removeNonState();
+
+}
+const filterEducation = (education) => {
+    console.log(education);
+
+    if(education == 'Select Education') {
+        return;
+    }
+    const temp = stateUsers.filter( user => education === user.education);
+    stateUsers = temp;
+    console.log(stateUsers);
+    removeNonState();
+}
+
+
+
+
+
+const applyFilters = () => {
+    setSelectVals();
+    filterLocation(locationSelectVal);
+    filterPositon(positionSelectVal);
+    filterEducation(educationSelectVal);
+    filterExperience(experienceSelectVal);
+    filterWorkEnviornment(workEnviornmentSelectVal);
+    render();
+}
