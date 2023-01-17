@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Your network</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,10 +32,12 @@
             <div class="container-fluid filter-container">
                 <div class="row network-section__filter-container">
                     <div class="col-12">
-                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                        </svg>
-                        Filter</h4>
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-funnel" viewBox="0 0 16 16">
+                                <path
+                                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                            </svg>
+                            Filter</h4>
                     </div>
                     <div class="col-2">
 
@@ -43,53 +45,55 @@
                             aria-label="size 3 select example">
                             <option selected disabled class="network-section__filter--disabled-option">Select Location
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Prishtine">Prishtine</option>
+                            <option value="New York">New York</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="Oslo">Oslo</option>
+                            <option value="Bucharest">Bucharest</option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <select class="form-select network-section__filter"
-                            id='position-select' aria-label="size 3 select example">
+                        <select class="form-select network-section__filter" id='position-select'
+                            aria-label="size 3 select example">
                             <option selected disabled class="network-section__filter--disabled-option">Select Position
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Product Manager">Product Manager</option>
+                            <option value="UI/UX Designer">UI/UX Designer</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <select class="form-select network-section__filter"
-                            id='job-type-select' aria-label="size 3 select example">
+                        <select class="form-select network-section__filter" id='job-type-select'
+                            aria-label="size 3 select example">
                             <option selected disabled class="network-section__filter--disabled-option">Select Job type
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Online">Online</option>
+                            <option value="Physical">Physical</option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <select class="form-select network-section__filter"
-                            id='experience-select' aria-label="size 3 select example">
+                        <select class="form-select network-section__filter" id='experience-select'
+                            aria-label="size 3 select example">
                             <option selected disabled class="network-section__filter--disabled-option">Select Experience
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Intern">Intern</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Senior">Senior</option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <select class="form-select network-section__filter"
-                            id='education-select' aria-label="size 3 select example">
+                        <select class="form-select network-section__filter" id='education-select'
+                            aria-label="size 3 select example">
                             <option selected disabled class="network-section__filter--disabled-option">Select Education
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="High School">High School</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Master">Master</option>
                         </select>
                     </div>
                     <div class="col-2 filter-btn-container">
-                        <button type="button" class="btn btn-light filter-btn">Apply filters</button>
+                        <button type="button" class="btn btn-light network-btn" onclick="applyFilters()">Apply filters</button>
                     </div>
                 </div>
             </div>
@@ -97,24 +101,822 @@
         <section class="employee-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
                             </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">An item</li>
-                              <li class="list-group-item">A second item</li>
-                              <li class="list-group-item">A third item</li>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
                             </div>
-                          </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card employee-section__card" style="width: 18rem;">
+                            <div class="images-container">
+                                <img src="./pictures/cover/1.jpg" class="card-img-top" alt="cover image">
+                                <div class="profile-image__container">
+                                    <img src="./pictures/profile/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-body card__body">
+                                <h5 class="card-title card__title">Card title</h5>
+                                <h6 class="card__sub-title">Engineer</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="card__list">
+                                <div class="container-fluid card-attributes">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                              </svg>
+                                              <span>Prishtina</span>
+                                            </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                                              </svg> <span>Online</span></li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                                              </svg> <span>Intern</span> </li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li class="card__item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                              </svg> <span>Bachelor</span></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="card-body">
+                                <div class="card-buttons__container">
+                                    <button type="button" class="btn btn-light network-btn"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                        </svg> Message</button>
+                                    <button type="button" class="btn btn-light network-btn">
+                                        <svg class="svg-icon"
+                                            style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M976 859.712h-256a32 32 0 0 1 0-64h256a32 32 0 0 1 0 64z" />
+                                            <path
+                                                d="M848 987.584a32 32 0 0 1-32-32v-255.808a32 32 0 0 1 64 0v255.808a32 32 0 0 1-32 32zM514.304 581.632c-160.96 0-291.84-130.496-291.84-290.816S353.344 0 514.304 0c160.896 0 291.84 130.496 291.84 290.816s-130.944 290.816-291.84 290.816z m0-517.632c-125.632 0-227.84 101.76-227.84 226.816s102.208 226.816 227.84 226.816 227.84-101.76 227.84-226.816S639.936 64 514.304 64z" />
+                                            <path
+                                                d="M761.024 615.616a31.168 31.168 0 0 1-17.344-5.12 422.592 422.592 0 0 0-101.888-48.064 32 32 0 1 1 19.328-60.992c41.216 13.056 80.64 31.68 117.248 55.296a32 32 0 0 1-17.344 58.88zM48 1024a32 32 0 0 1-32-32c0-226.816 141.248-424 351.488-490.624a32 32 0 1 1 19.328 61.056C203.328 620.544 80 793.216 80 992a32 32 0 0 1-32 32z" />
+                                        </svg>
+                                        Add friend</button>
+                                </div>
+                            </div>
+                            <div class="objId" style="display: none;">
+                            </div>
+                        </div>
+                    </div>   
                 </div>
             </div>
         </section>
