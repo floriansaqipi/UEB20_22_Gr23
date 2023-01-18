@@ -45,7 +45,7 @@
         <div class="container form-container">
             <div class="row">
                 <div class="col-12">
-                    <form class="row g-3 needs-validation" novalidate>
+                    <form class="row g-3 needs-validation" novalidate method="post" action="#">
                         <div class="col-md-6">
                           <label for="first-name-form" class="form-label">First name</label>
                           <input type="text" class="form-control" id="first-name-form" placeholder="Enter name..." required>
@@ -113,29 +113,98 @@
                             </div>
                             <div class="col-md-6 checkbox-container">
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Walk-in</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox4">Rreferal</label>
                               </div> <br>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Newspaper</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox5">Linked In</label>
                               </div> <br>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Twitter</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox6">Others</label>
                               </div>
                             </div>
 
                           </div>
                         </div>
                         <div class="col-md-3">
-                          <label for="validationCustom05" class="form-label">Zip</label>
-                          <input type="text" class="form-control" id="validationCustom05" required>
-                          <div class="invalid-feedback">
-                            Please provide a valid zip.
+                          <div class="row">
+                            <div class="col-md-12">
+                              <label for="">Your Gender</label> 
+                            </div>
+                            <div class="col-md-12 radio-button-container">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                              </div><br>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                              </div><br>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Other</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-3">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <label for="">Experience</label> 
+                            </div>
+                            <div class="col-md-12 radio-button-container">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Senior</label>
+                              </div><br>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Intern</label>
+                              </div><br>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">None</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div>
+                            <label for="formFileLg" class="form-label">Upload your CV</label>
+                            <input class="form-control form-control-lg" id="formFileLg" type="file">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="exampleFormControlTextarea1" class="form-label">Motivational letter</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What makes you special"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                          <article class="terms-conditions">
+                            <h4 class="terms-conditons__title">Terms&conditions</h4>
+                            <h6 class="terms-condtions__sub-title">These are our <abbr title="terms">terms and conditions</abbr>. Read through carefully don't submit in case of inagreement!</h6>
+                            <ol class="terms-list">
+                              <li>The Employee agrees that he or she will faithfully and to the best of their ability to carry out the duties and responsibilities communicated to them by the Employer. The Employee shall comply with all company policies, rules and procedures at all times.</li>
+                              <li>As a employee, it is the duty of the Employee to perform all essential job functions and duties. From time to time, the Employer may also add other duties within the reasonable scope of the Employee’s work.
+                                <ul class="terms-sublist__responsibilites">
+                                  <li>Attending meetings</li>
+                                  <li>Organizing events</li>
+                                  <li>Able to lead teams</li>
+                                </ul>
+                              </li>
+                              <li>As compensation for the services provided, the Employee shall be paid a wage of $24 [per hour/per annum] and will be subject to a(n) [quarterly/annual] performance review. All payments shall be subject to mandatory employment deductions (State & Federal Taxes, Social Security, Medicare).</li>
+                              <li>The Employee has the right to participate in any benefits plans offered by the Employer. The employer currently offers [list benefits, if any]. Access to these benefits will only be possible after the probationary period has passed.
+                                <ul class="terms-sublist__benefits">
+                                  <li>Paid time off</li>
+                                  <li>Employee discounts, rewards, and bonuses</li>
+                                  <li>Career development training </li>
+                                </ul>
+                              </li>
+                              <li>It is understood that the first [time frame] of employment constitutes a probationary period. During this time, the Employee is not eligible for paid time off or other benefits. During this time, the Employer also exercises the right to terminate employment at any time without advanced notice.</li>
+                            </ol>
+                          </article>
+                        <div class="col-md-12">
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
@@ -146,8 +215,8 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-12">
-                          <button class="btn btn-primary" type="submit">Submit form</button>
+                        <div class="col-12 button-container">
+                          <button class="btn btn-light" type="submit">Submit form</button>
                         </div>
                       </form>
                 </div>

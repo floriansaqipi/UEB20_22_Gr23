@@ -36,3 +36,46 @@ body{
 .checkbox-container{
     margin-top: 0.5rem;
 }
+
+.radio-button-container{
+    margin-top: 0.5rem;
+}
+
+.terms-conditons__title{
+    margin-top: 1rem;
+    text-align: center;
+    color: #6d6d6d;
+}
+.terms-condtions__sub-title{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #6d6d6d;
+}
+
+abbr{
+    color: black;
+}
+
+.terms-list{
+    list-style-type: upper-roman;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+}
+
+.terms-sublist__responsibilites{
+    list-style-type: square;
+}
+
+.terms-list li{
+    margin-top: 0.2rem;
+}
+
+.terms-sublist__benefits{
+    list-style-type: circle;
+}
+
+.button-container{
+    margin-top: 1rem;
+    text-align: center;
+}
