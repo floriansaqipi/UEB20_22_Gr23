@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+#main-section{
+    background: linear-gradient(to top, rgba(109, 109, 109, 0.6) 10%, transparent),
+    radial-gradient(circle, transparent 90%, rgba(109, 109, 109, 0.6)),
+    url("../pictures/extra/2.jpg") 0% 45% /cover no-repeat border-box, #6d6d6d;
+    width: 100vw;
+    height: 60vh;
+}
+
+#title-section{
+    margin-top: 2rem;
+    text-align: center;
+    color: #6e6e6e
+    
+}
+
+.form-container{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fdfdfd;
+    box-shadow: 2px 2px 20px 5px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+
+.checkbox-container{
+    margin-top: 0.5rem;
+}
