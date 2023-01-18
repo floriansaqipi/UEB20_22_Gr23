@@ -45,37 +45,56 @@
         <div class="container form-container">
             <div class="row">
                 <div class="col-12">
-                    <form class="row g-3 needs-validation" novalidate method="post" action="#">
+                    <form class="row g-3 needs-validation" novalidate >
                         <div class="col-md-6">
                           <label for="first-name-form" class="form-label">First name</label>
-                          <input type="text" class="form-control" id="first-name-form" placeholder="Enter name..." required>
-                          <div class="valid-tooltip">
-                            Looks good!
+                          <input type="text" class="form-control  form__input name-input" id="first-name-form" placeholder="Enter name..." required>
+                          <div class="invalid-feedback">
+                            Please provide a valid first name
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="last-name-form" class="form-label">Last name</label>
-                          <input type="text" class="form-control" id="last-name-form" placeholder="Enter last name..." required>
+                          <input type="text" class="form-control  form__input" id="last-name-form" placeholder="Enter last name..." required>
+                          <div class="invalid-feedback">
+                            Please provide a valid last name
+                          </div>
                         </div>
+
                         <div class="col-md-4">
-                          <label for="validationCustom03" class="form-label">Date</label>
-                          <input type="date" class="form-control" id="validationCustom03" placeholder="Enter last name..." required>
+                          <label for="validationCustom03" class="form-label">BirthDate</label>
+                          <input type="date" class="form-control  form__input" id="date-form" placeholder="Enter last name..." required>
+                          <div class="invalid-feedback">
+                            Please provide a valid date older than 18
+                          </div>
                         </div>
                         <div class="col-md-4">
                           <label for="validationCustom04" class="form-label">Number include country code</label>
-                          <input type="tel" class="form-control" id="validationCustom04" placeholder="example +3834532443" required>
+                          <input type="tel" class="form-control  form__input" id="validationCustom04" placeholder="example +3834532443" required>
+                          <div class="invalid-feedback">
+                            Please provide a valid phone number
+                          </div>
                         </div>
                         <div class="col-md-4">
                           <label for="validationCustom05" class="form-label">Adress</label>
-                          <input type="text" class="form-control" id="validationCustom05" placeholder="124 Str smth" required>
+                          <input type="text" class="form-control  form__input" id="adress-form" placeholder="124 Str smth" required>
+                          <div class="invalid-feedback">
+                            Please provide a valid Adress
+                          </div>
                         </div>
                         <div class="col-md-4">
                           <label for="validationCustom06" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="validationCustom06" placeholder="example someone@something.com" required>
+                          <input type="email" class="form-control  form__input" id="email-form" placeholder="example someone@something.com" required>
+                          <div class="invalid-feedback">
+                            Please provide a valid email
+                          </div>
                         </div>
                         <div class="col-md-4">
                           <label for="exampleDataList" class="form-label">Country</label>
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <input class="form-control  form__input" list="datalistOptions" id="country-form" placeholder="Type to search...">
+                            <div class="invalid-feedback">
+                              Please provide a valid country
+                            </div>
                             <datalist id="datalistOptions">
                               <option value="Kosovo">
                               <option value="Germany">
@@ -87,7 +106,7 @@
                         </div>
                         <div class="col-md-4">
                           <label for="validationCustom03" class="form-label">City</label>
-                          <input type="text" class="form-control" id="validationCustom03" placeholder="Enter your city" required>
+                          <input type="text" class="form-control  form__input" id="validationCustom03" placeholder="Enter your city" required>
                           <div class="invalid-feedback">
                             Please provide a valid city.
                           </div>
@@ -156,15 +175,15 @@
                             </div>
                             <div class="col-md-12 radio-button-container">
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
                                 <label class="form-check-label" for="inlineRadio1">Senior</label>
                               </div><br>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
                                 <label class="form-check-label" for="inlineRadio2">Intern</label>
                               </div><br>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3">
                                 <label class="form-check-label" for="inlineRadio3">None</label>
                               </div>
                             </div>
@@ -173,7 +192,10 @@
                         <div class="col-md-12">
                           <div>
                             <label for="formFileLg" class="form-label">Upload your CV</label>
-                            <input class="form-control form-control-lg" id="formFileLg" type="file">
+                            <input class="form-control form-control-lg" id="cv-form" type="file">
+                            <div class="invalid-feedback">
+                              Please provide a file.
+                            </div>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -216,7 +238,7 @@
                           </div>
                         </div>
                         <div class="col-12 button-container">
-                          <button class="btn btn-light" type="submit">Submit form</button>
+                          <button class="btn btn-light form__button" id="form__button" type="button" onclick="validate()">Submit form</button>
                         </div>
                       </form>
                 </div>
@@ -232,5 +254,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/hiring-form.js"></script>
   </body>
 </html>

@@ -79,3 +79,33 @@ abbr{
     margin-top: 1rem;
     text-align: center;
 }
+
+.form__input{
+    background-color: white;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+}
+
+.form__input:focus,
+.form__input:focus-visible,
+.form__input:hover,
+.form__input:active{
+    border: 1px solid #bcbcbc;
+    box-shadow: 1px 1px 2px 3px rgb(0 0 0 / 10%);
+    outline: none;
+    background: #f3f3f3;
+    color: black;
+}
+
+.form__button{
+    background-color: #ebebeb;
+    color: #434343;
+    border: 2px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.error-style{
+    border: 1px solid red;
+    background: #fff4f4;
+}
