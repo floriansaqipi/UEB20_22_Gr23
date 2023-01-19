@@ -71,6 +71,7 @@ body{
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .svg-container{
@@ -95,4 +96,78 @@ body{
 
 .numbers-container > h3{
     font-size: 1.7rem;
+}
+
+.employee-table-section{
+    margin-top: 2rem;
+    color: #6e6e6e;
+    text-align: center;
+}
+
+.table-container{
+    background: #fdfdfd;
+    padding: 1rem;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+
+.employee_voice-note1,
+.employee_voice-note2{
+    /* width: 40%; */
+    /* margin: auto;
+    display: flex; */
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #7f7f7f;
+    border-radius: 20px;
+    background-color: #ebebeb;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.employee_voice-note1 > svg,
+.employee_voice-note2 > svg{
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.employee_voice-note1:active,
+.employee_voice-note2:hover,
+.employee_voice-note2:active,
+.employee_voice-note1:hover{
+background: #dbdbdb;
+}
+
+.voice-col{
+    text-align: center;
+    margin: auto;
+}
+
+.voice-mail-th{
+    text-align: center;
+}
+
+
+.employee-table {
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+    border-collapse: collapse;
+    text-align: left; 
+    border-spacing: 2px;
+}
+
+.employee-table th, 
+.employee-table td{
+   background-color: #ffffff;
+   padding: 0.6rem;
+   
+}
+
+.employee-table th{
+    color: #6e6e6e;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #f8f8f8;
 }
