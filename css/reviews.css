@@ -4,6 +4,117 @@
     font-family: poppins;
     box-sizing: border-box;
 }
+.navbar-brand {
+  font-size: 32px;
+  color: #6e6e6e;
+  margin-left:20px;
+  widht:100%;
+  
+  }
+  .nav-link{
+      color: black;
+  }
+  .nav-link:hover{
+      color: blue;
+      transition: 0.3s;
+  }
+  .nav-item{
+      color: rgb(7,7,78);
+      font-weight: 500;
+      padding-left: 35px;
+    
+  
+  }
+  
+  .btn0{
+      height: 42px;
+      width: 130px;
+    
+   border: none;
+    
+  
+      transition: all 0.4s;
+  
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+      font-family: inherit;
+     
+  }
+  .btn0:hover{
+    background-color: rgb(246, 246, 246);
+      transition: all 0.4s;
+    }
+    .btn1{
+  
+      width: 130px;
+      border: none;
+      color: black;
+      transition: all 0.4s;
+  
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+      font-family: inherit;
+      
+  
+    }
+    .btn1:hover{
+      background-color: rgb(246, 246, 246);
+      transition: all 0.4s;
+    
+  
+      border: none;
+      outline: none;
+  
+    }
+::-webkit-scrollbar{
+  width:0;
+}
+#scrollPath
+{
+  position:fixed;
+  top:0;
+  right:0;
+  width:10px;
+  height:100%;
+  background:rgba(255,255,255,0.05) ;
+}
+#progressbar{
+  position:fixed;
+  top:0;
+  right:0;
+  width:10px;
+  background: linear-gradient(to top,#979797,#252525);
+  animation:animate 5s linear infinite;
+}
+@keyframes animate{
+  0%,100%{
+    filter:hue-rotate(0deg);
+  }
+  50%{
+    filter: hue-rotate(360deg);
+  }
+
+}
+#progressbar:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,#979797,#252525);
+  filter: blur(10px);
+}
+#progressbar:after{
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,#979797,#252525);
+  filter: blur(30px);
+}
 #reviews{
     display: flex;
     justify-content: center;
@@ -143,9 +254,7 @@
   }
  
   #average{
-    display: flex;
-    flex-direction: column;
-    width:70%;
+    width:90%;
     margin-top: 70px;
   }
   .side {
@@ -213,9 +322,74 @@
       display: none;
     }
   }
-  .personalreview{
+  .container form{
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 70px;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+::placeholder{
+    font-size: 14px;
+}
+form button{
+    background:#333333;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+form button:hover{
+  background:#4b4b4b;
+}
+  .statistic-table{
     margin-top: 70px;
   }
   .footer{
     background-color: #ccc;
   }
+ .colb{
+  position:absolute;
+  width: 70%;
+  margin-left: 600px;
+  margin-top: -525px;
+ }
