@@ -271,4 +271,35 @@ background: #dbdbdb;
 .salary-inc-alert > div
 .total-inc-alert > div{
     display: inline-block;
-    }
+}
+
+.refer-section{
+    margin-top: 1rem;
+}
+
+.refer-section__title{
+    margin-top: 2rem;
+    color: #6e6e6e;
+    text-align: center;
+}
+
+.ref-table-container{
+    background: #fdfdfd;
+    padding: 1rem;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.ref-table th, 
+.ref-table td{
+   
+    border-bottom: 1px solid #6e6e6e;
+}
+
+.ref-table th{
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #f8f8f8;
+}
