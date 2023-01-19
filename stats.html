@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/stats.css">
+
+    <title>Statistics</title>
+  </head>
+  <body>
+    <section class="alert-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </symbol>
+                        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </symbol>
+                        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </symbol>
+                    </svg>
+                      
+                      <div class="alert alert-primary  total-inc-alert" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                        <div>
+                          An example alert with an icon
+                        </div>
+                      </div>
+                      <div class="alert alert-success  salary-inc-alert" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                          Salary increase by percentage successful!
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sub-nav">
+            <div class="container-fluid">
+              <a class="navbar-brand sub-nav__brand" href="#">Table navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse sub-nav__container" id="navbarNavDropdown">
+                <ul class="navbar-nav sub-nav__list">
+                  <li class="nav-item sub-nav__element">
+                    <a class="nav-link active" aria-current="page" href="#employee-table-section">Employee table</a>
+                  </li>
+                  <li class="nav-item sub-nav__element">
+                    <a class="nav-link active" aria-current="page" href="#calculations-section">Calculations</a>
+                  </li>
+                  <li class="nav-item sub-nav__element">
+                    <a class="nav-link active" aria-current="page" href="#refer-section">Referation table</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="title-section">
+            <div class="container">
+                <div class="col-md-12">
+                    <h1 class="title-section__title">All your statistics in one place</h1>
+                </div>
+            </div>
+            <div class="container main-stats__container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <article class="stat-article">
+                            <div class="row">
+                                <div class="col-6 numbers-container">
+                                    <h3>150</h3>
+                                    <h5>New Orders</h5>
+                                </div>
+                                <div class="col-6 svg-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                </div>
+                                <div class="col-12">
+                                    <div class="stat-artice__footer">
+                                        more info
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="stat-article">
+                            <div class="row">
+                                <div class="col-6 numbers-container">
+                                    <h3>65</h3>
+                                    <h5>Unique Visitors</h5>
+                                </div>
+                                <div class="col-6 svg-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart" viewBox="0 0 16 16">
+                                        <path d="M7.5 1.018a7 7 0 0 0-4.79 11.566L7.5 7.793V1.018zm1 0V7.5h6.482A7.001 7.001 0 0 0 8.5 1.018zM14.982 8.5H8.207l-4.79 4.79A7 7 0 0 0 14.982 8.5zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                      </svg>
+                                </div>
+                                <div class="col-12">
+                                    <div class="stat-artice__footer">
+                                        more info
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="stat-article">
+                            <div class="row">
+                                <div class="col-6 numbers-container">
+                                    <h3>53 %</h3>
+                                    <h5>Bounce Rate</h5>
+                                </div>
+                                <div class="col-6 svg-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                                        <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+                                      </svg>
+                                </div>
+                                <div class="col-12">
+                                    <div class="stat-artice__footer">
+                                        more info
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="stat-article">
+                            <div class="row">
+                                <div class="col-6 numbers-container">
+                                    <h3>77</h3>
+                                    <h5>User Registrations</h5>
+                                </div>
+                                <div class="col-6 svg-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                </div>
+                                <div class="col-12">
+                                    <div class="stat-artice__footer">
+                                        more info
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="employee-table-section" id="employee-table-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="employee-section__title">Employees</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive table-container">
+                            <table class="table employee-table">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">First</th>
+                                      <th scope="col">Last</th>
+                                      <th scope="col">Salary &euro;</th>
+                                      <th scope="col">Postion</th>
+                                      <th class="voice-mail-th"scope="col">Voice mail</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Rigoberto</td>
+                                      <td>Whitney</td>
+                                      <td class="salary-col">1400.00</td>
+                                      <td>Product Manager</td>
+                                      <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>Keagan</td>
+                                      <td>Hardin</td>
+                                      <td class="salary-col">1000.00</td>
+                                      <td>UI/UX Designer</td>
+                                      <td class="voice-col"><span class="employee_voice-note2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>Hannah</td>
+                                      <td>Winters</td>
+                                      <td class="salary-col">1100.00</td>
+                                      <td>Frontend Developer</td>
+                                      <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">4</th>
+                                      <td>Tyrese</td>
+                                      <td>Ferrell</td>
+                                      <td class="salary-col">1200.00</td>
+                                      <td>Backend Developer</td>
+                                      <td class="voice-col"><span class="employee_voice-note2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">5</th>
+                                      <td>Eric</td>
+                                      <td>Howard</td>
+                                      <td class="salary-col">1200.00</td>
+                                      <td>Backend Developer</td>
+                                      <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">6</th>
+                                      <td>Paige</td>
+                                      <td>Elliott</td>
+                                      <td class="salary-col">1100.00</td>
+                                      <td>Frontend Developer</td>
+                                      <td class="voice-col"><span class="employee_voice-note2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">7</th>
+                                      <td>Chace</td>
+                                      <td>Bullock</td>
+                                      <td class="salary-col">1400.00</td>
+                                      <td>Product Manager</td>
+                                      <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">8</th>
+                                      <td>Scott</td>
+                                      <td>Reeves</td>
+                                      <td class="salary-col">1000.00</td>
+                                      <td>UI/UX Designer</td>
+                                      <td class="voice-col"><span class="employee_voice-note2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">9</th>
+                                      <td>Anton</td>
+                                      <td>Wall</td>
+                                      <td class="salary-col">1100.00</td>
+                                      <td>Frontend Developer</td>
+                                      <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                      </svg>Play</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Sherlyn</td>
+                                        <td>Galvan</td>
+                                        <td class="salary-col">1100.00</td>
+                                        <td>Frontend Developer</td>
+                                        <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                          </svg>Play</span></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">11</th>
+                                        <td>Brayden</td>
+                                        <td>Herman</td>
+                                        <td class="salary-col">1200.00</td>
+                                        <td>Backend Developer</td>
+                                        <td class="voice-col"><span class="employee_voice-note2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                          </svg>Play</span></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">12</th>
+                                        <td>Nikhil</td>
+                                        <td> Duarte</td>
+                                        <td class="salary-col">1200.00</td>
+                                        <td>Backend Developer</td>
+                                        <td class="voice-col"><span class="employee_voice-note1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                          </svg>Play</span></td>
+                                      </tr>
+                                    
+                            </table>
+                          </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="calculations-section" id="calculations-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="calculations-section__title">Calculations</h1>
+                    </div>
+                    <div class="col-12 calc-toggler-container">
+                        &#8650;
+                    </div>
+                </div>
+            </div>
+            <div class="container form-container">
+                <div class="row">
+                    <div class="col-md-6 form-sal-inc-container">
+                        <form class="row g-3 needs-validation" novalidate autocomplete="on">
+                            <div class="col-md-12">
+                              <label for="salary-inc-form" class="form-label">Raise employees salary by %</label>
+                              <input type="number" class="form-control  form__input salary-inc-input" id="salary-inc-form" placeholder="Enter percentage" required>
+                              <div class="invalid-feedback">
+                                Please provide percentage over 0 and under 50
+                              </div>
+                            </div>
+                            <div class="col-12 button-container">
+                              <button class="btn btn-light form__button" id="form__button" type="button" onclick="validateSalaryInc()">Submit form</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="col-md-6 form-total-sal-container">
+                        <form class="row g-3 needs-validation " novalidate autocomplete="on">
+                            <div class="col-md-12">
+                              <label for="first-name-form" class="form-label">Calcuate total salary expenses by raising %</label>
+                              <input type="number" class="form-control  form__input total-sal-input" id="total-sal-form" placeholder="Enter percentage" required>
+                              <div class="invalid-feedback">
+                                Please provide percentage over 0 and under 50
+                              </div>
+                            </div>
+                            <div class="col-12 button-container">
+                              <button class="btn btn-light form__button" id="form__button" type="button" onclick="validateTotalSal()">Submit form</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="referrations-section" id="refer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="refer-section__title">Referations of our employees</h1>
+                        <div class="col-12">
+                            <div class="table-responsive ref-table-container">
+                                <table class="table table-striped ref-table">
+                                    <thead>
+                                      <tr>
+                                        <th width="50%" scope="col">Source</th>
+                                        <th width="50%" scope="col">Percentage %</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Google</td>
+                                        <td>24.22</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Facebook</td>
+                                        <td>12.11</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Television</td>
+                                        <td>5.12</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Newspaper</td>
+                                        <td>3.12</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Radio</td>
+                                        <td>7.14</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Radio</td>
+                                        <td>5.16</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Email</td>
+                                        <td>18.22</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Other</td>
+                                        <td>24.81</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+    <script src="./scripts/stats.js"></script>
+  </body>
+</html>

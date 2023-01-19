@@ -21,7 +21,7 @@ class Employee{
     print(){
         console.log('User: ');
         console.log('First Name: ' + this.firstName);
-        console.log('Last Name: ' + this.last);
+        console.log('Last Name: ' + this.lastName);
         console.log('Birthday: ' + this.birthday);
         console.log('Email: ' + this.email);
         console.log('Adress: ' + this.adress);
@@ -133,7 +133,6 @@ const validateAdress = () => {
 const validateCountry = () => {
     const countryInput = document.getElementById('country-form');
     const country = countryInput.value;
-    console.log(country);
     if(country == undefined || country == ''){
         failedValidationStyling(countryInput);
         throw 'country can not be empty';
@@ -160,6 +159,7 @@ const validateCV = () => {
 let isValid = true;
 
 const validate = () => {
+    isValid=true;
     try{
         validateFirstName() ;
     }catch (exp) {
@@ -206,11 +206,23 @@ const validate = () => {
 }
 
 
+const replaceNames = () => {
+    stateName = stateName.replace("w","ë");
+    stateName = stateName.replace("W","Ë");
+}
+
 
 function generateRes() {
     if(isValid == true){
-        const employee = new Employee(stateName,stateLastName,stateBirthday,stateEmail,stateAdress,stateCountry,stateCv);
-        employee.print();
+        replaceNames();
+        const promise = new Promise( (resolve,reject) => {
+            setTimeout(()=>{
+                const employee = new Employee(stateName,stateLastName,stateBirthday,stateEmail,stateAdress,stateCountry,stateCv);
+                console.log(employee);
+                resolve(employee);
+            },1500);
+        });
+        promise.then(res => res.print()).catch(err => console.error(err));
         //TODO success stuff
     }else {
         //to do warning failure

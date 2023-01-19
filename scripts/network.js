@@ -101,7 +101,7 @@ const setSelectVals = () => {
 
 const removeNonState = () => {
     cards.forEach(card => {
-        if(!stateUsers.find(user => user.id === +card.lastElementChild.innerHTML)){
+        if(!stateUsers.find(user => user.id === parseInt(card.lastElementChild.innerHTML))){
             if(card.parentElement.parentElement == null) {return;}
             card.parentElement.parentElement.removeChild(card.parentElement);
         }
