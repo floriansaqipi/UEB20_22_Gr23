@@ -11,6 +11,7 @@ body{
 }
 
 #main-section{
+    margin-top: 4rem;
     background: linear-gradient(to top, rgba(109, 109, 109, 0.6) 10%, transparent),
     radial-gradient(circle, transparent 90%, rgba(109, 109, 109, 0.6)),
     url("../pictures/extra/2.jpg") 0% 45% /cover no-repeat border-box, #6d6d6d;

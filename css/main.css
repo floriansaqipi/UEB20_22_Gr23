@@ -79,6 +79,7 @@ margin-left:20px;
   }
   /*main*/
  .main{
+  margin-top: 4rem;
   background: rgb(213,213,213);
   background: linear-gradient(90deg, rgba(213,213,213,1) 0%, rgba(241,241,241,1) 14%);
  }
