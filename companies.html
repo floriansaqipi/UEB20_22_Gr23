@@ -13,6 +13,10 @@
   
 
   <style>
+    @font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
         
     *{
         box-sizing: border-box;
@@ -20,7 +24,7 @@
         padding: 0;
      }
      body{
-      
+      margin: 0;
         min-height: 100vh;
 
      }
@@ -112,6 +116,7 @@
     .titujt {
         color: white;
        text-align: center;
+       margin-top:5rem;
     }
     
     .titujt span {
@@ -378,13 +383,113 @@ margin:70px auto;
 
     }
     }
+    
 
-    .header1{
-        display: flex;
-        flex-direction: column;
-        
+.main__navbar{
+    font-family: "Poppins";
+    background-color: #f8f8f8;
+    margin: 0 ;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.main-nav__brand{
+    color: #434343 !important;
+    font-size: 1.5rem !important;
+    font-weight: 400;
+}
+
+.main-nav__container{
+    margin-left: 2rem;
+}
+
+.main-nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__element{
+    font-size: 1.2rem;
+    /* margin-top: 0.25rem; */
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.main-nav__element a{
+    padding: 0.5rem 0.5rem;
+}
+
+.main-nav__element > a:hover,
+.main-nav__element > a:active{
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+
+.footer{
+    background-color: #ccc;
+    margin-top:20px;
+  
+  }
+
+  .navbar-brand__main:hover{
+        color: black !important;
+  }
+
+
+  .main-navbar__container{
+    justify-content: space-between;
+  }
+
+  .btn0{
+    height: 42px;
+    width: 130px;
+  
+ border: none;
+  
+
+    transition: all 0.4s;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+    font-family: inherit;
    
-    }
+}
+.btn0:hover{
+  background-color: rgb(231, 231, 231);
+    transition: all 0.4s;
+  }
+  .btn1{
+
+    width: 130px;
+    border: none;
+    color: black;
+    transition: all 0.4s;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+    font-family: inherit;
+    
+
+  }
+  .btn1:hover{
+    background-color: rgb(231, 231, 231);
+    transition: all 0.4s;
+  
+
+    border: none;
+    outline: none;
+
+  }
+
+  .footer{
+    background-color: #ccc;
+    margin-top:20px;
+  
+  }
 
 
 
@@ -395,7 +500,39 @@ margin:70px auto;
 
 </head>
 <body>
- 
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light main-nav main__navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand main-nav__brand navbar-brand__main" href="./index.html">Job-finder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse main-nav__container main-navbar__container" id="navbarNavDropdown">
+              <ul class="navbar-nav main-nav__list">
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./network.html">Network</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./hiring-form.html">Apply</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./stats.html">Stats</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./companies.html">Companies</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./reviews.html">Reviews</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn0">Join Now</button>
+                <button class="btn1 mx-2">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
     
         <h1 class="titujt " id="title1 ">
             <span>C</span>
@@ -411,14 +548,6 @@ margin:70px auto;
         </h1>
 
         <p style="text-align: center;font-size: 20px;color: #333;">~FOR YOU,WITH YOU~</p>
-           
-
-  
-    
- 
-   
-   
-    
    
     <div class="slide-container swiper">
      
@@ -706,7 +835,7 @@ margin:70px auto;
     </div>
 
 
-    <footer class=" text-dark pt-5 pb-4 container">
+    <footer class=" text-dark pt-5 pb-4 container-fluid">
         <div class="footer container-fluid">
       <div class=" text-center text-md-left"></div>
         <div class="row text-center text-md-left">
@@ -841,7 +970,7 @@ margin:70px auto;
     $(document).ready(function(){
           $('#input').change(function(){
               var input =$(this).val();
-              $('ul').append('<li>'+ input +'<i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>');
+              $('.ul_').append('<li>'+ input +'<i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>');
               $(this).val('');
           });
           $('ul').on('click','.fa-trash',function(){
