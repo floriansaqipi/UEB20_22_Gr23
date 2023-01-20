@@ -11,7 +11,7 @@ body{
 }
 
 .network-main-section{
-    margin-top: 32px;
+    margin-top: 5rem;
 }
 
 .network-section__title{
@@ -198,4 +198,8 @@ body{
     color: black    ;
     border-radius: 15px;
  
+}
+
+.main__navbar{
+    background: #fdfdfd !important;
 }
