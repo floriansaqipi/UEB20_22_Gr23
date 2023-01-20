@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Companies</title>
+    <link rel="stylesheet" href="swiper-bundle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  
+
+  <style>
+    @font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+        
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+     }
+     body{
+      margin: 0;
+        min-height: 100vh;
+
+     }
+     .card-image{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        padding: 3px;
+        border-radius:50%;
+       background-color: #E6E6E6;
+     }
+     .image-content,.card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+        height: 200px;
+        
+     }
+     .card-image .img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border: 4px solid #6d6666;
+        border-radius: 50%;
+     }
+     .card{
+       
+        background-color: white;
+        box-shadow: 0 13px 23px grey;
+    
+        
+     }
+     .slide-content{
+        margin: 0 40px;
+        
+      
+     }
+     .company-name{
+        font-size: 30px;
+        font-weight: BOLD;
+        padding: 15px;
+     }
+     .company-des{
+        font-size: 18px;
+        text-align: center;
+        overflow:hidden;
+        
+     }
+   
+     .readmore-btn{
+      display: inline-block;
+        border: none;
+        font-size: 20px;
+        color: white;
+        padding: 10px 18px;
+        background-color: #989696;
+        width: 100%;
+        cursor: pointer;
+       text-decoration: none;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+      text-align: center;
+
+     }
+     .readmore-btn:hover{
+        background-color: #E6E6E6;
+        color: black;
+        font-weight: bold;
+     }
+     .slide-container{
+        width: 1200px;
+        width: 100%;
+        padding: 50px 0;
+        
+     }
+ 
+     .card:hover{
+      
+      transform: scale(1.1);
+     }
+     .card-wrapper:hover .card{
+      filter: blur(10px);
+     }
+     .card-wrapper .card:hover{
+      filter:blur(0px);
+     }
+
+    .titujt {
+        color: white;
+       text-align: center;
+       margin-top:5rem;
+    }
+    
+    .titujt span {
+        margin: 0;
+        padding: 0;
+        animation: animate 2s linear infinite;
+        font-size: 60px;
+    }
+    
+    @keyframes animate {
+        0%,
+        100% {
+            color:#6e6e6e;
+            filter: blur(2px);
+            text-shadow: 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e, 0 0 2px #6e6e6e;
+        }
+        5%,
+        95% {
+            color:white;
+            filter: blur(0px);
+            text-shadow: 0 0 10px none;
+        }
+    }
+    
+    .titujt span:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    .titujt span:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+    
+    .titujt span:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+    
+    .titujt span:nth-child(4) {
+        animation-delay: 0.75s;
+    }
+    
+    .titujt span:nth-child(5) {
+        animation-delay: 1s;
+    }
+    
+    .titujt span:nth-child(6) {
+        animation-delay: 1.25s;
+    }
+    
+    .titujt span:nth-child(7) {
+        animation-delay: 1.5s;
+    }
+    
+    .titujt span:nth-child(8) {
+        animation-delay: 1.75s;
+    }
+    
+    .titujt span:nth-child(9) {
+        animation-delay: 2s;
+    }
+
+   
+    
+    @media only screen and (max-width:600px){
+        
+        .titujt span {
+        margin: 0;
+        padding: 0;
+        animation: animate 2s linear infinite;
+        font-size: 25px;
+
+       
+    }
+    #paragraph{
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+    .body_container{
+        background: linear-gradient(45deg,#f8f8f8 50%,#6e6e6e 50%);
+
+        display: flex;
+        flex-direction: row;
+        margin-top:100px;
+        justify-content: space-around;
+    }
+    .note_container{
+        margin: 100px;
+        background-color: white;
+        height:550px;
+        width: 700px;
+        box-shadow: 0px 15px 20px grey;
+        padding: 10px;
+        overflow-y:auto;
+
+    }
+    #input{
+        height: 50px;
+         width: 100%;
+         outline: none;
+         border: none;
+         border-radius: 5px;
+         background-color: #E6E6E6;
+         color: black;
+         padding: 0 10px;
+         margin: 15px 0;
+    }
+    #input::placeholder{
+        color: #bbb;
+
+    }
+    .ul_{
+        margin: 0;
+        padding: 0;
+    }
+   
+
+    .ul_ li{
+        width:100%;
+        background: #eee;
+        color: #333;
+        height: 40px;
+        border-radius:50px ;
+        margin: 10px 0;
+        padding: 10px;
+        position: relative;
+        list-style: none;
+    }
+    .ul_ .fa-check,.fa-trash{
+        position: absolute;
+        cursor: pointer;
+    }
+    .ul_ .fa-check{
+        right:40px ;
+        color: green;
+    }
+    .ul_ .fa-trash{
+        right:15px ;
+        color: red;
+    }
+    .ul_ .checked{
+        background:lightgreen ;
+        text-decoration: line-through;
+        transition: .2s;
+    }
+    .div_note_caption{
+        margin: auto;
+        padding: 100px;
+        font-size: 35px;
+    }
+ 
+   
+        
+    @media only screen and (max-width:600px){
+        .body_container{
+        background: linear-gradient(45deg,#f8f8f8 50%,#6e6e6e 50%);
+        display: flex;
+        flex-direction: column;
+        margin-top:100px;
+        justify-content: space-around;
+    }
+    .note_container{
+        display: block;
+        margin:20px auto;
+        background-color: white;
+        height:400px;
+        width: 300px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        overflow-y:auto;
+
+    }
+   
+    .div_note_caption{
+       text-align: center;
+        padding: 10px;
+    }
+    }
+    #butoni{
+        margin-top: 40px;
+        padding: 10px;
+        width: 220px;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5) ;
+        border: 1px solid black;
+
+        
+    }
+    .calculation-table{
+        margin: 100px;
+    
+      
+    }
+    .calculation-table table{
+        border-collapse: collapse;
+        
+    }
+    .calculation-table table,th,td{
+        border: 1px solid black;
+        padding: 15px;
+    }
+    .calculation-table table th{
+        background-color: #acaaaa;
+    }
+ tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.swiper-button-next{
+    color: #333;
+}
+.swiper-button-prev{
+    color: #333;
+}
+.swipper-pagination{
+    color: #333;
+}
+
+
+#video1{
+display: block;
+margin:70px auto;
+
+}
+#video2{
+display: block;
+margin:70px auto;
+
+}
+.butons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    }
+    .butoni{
+        margin:20px 10px;
+        padding: 10px;
+        height: 50px;
+        width: 120px;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5) ;
+        border: 1px solid grey;
+
+    }
+    @media only screen and (max-width:600px){
+        #video1{
+            display: block;
+            margin: 50px auto;
+            width: 300px;
+        }
+        .butons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    }
+    .butoni{
+        margin:10px 5px;
+        padding: 10px;
+        height: 40px;
+        width: 110px;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5) ;
+        border: 1px solid black;
+
+    }
+    }
+    
+
+.main__navbar{
+    font-family: "Poppins";
+    background-color: #f8f8f8;
+    margin: 0 ;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.main-nav__brand{
+    color: #434343 !important;
+    font-size: 1.5rem !important;
+    font-weight: 400;
+}
+
+.main-nav__container{
+    margin-left: 2rem;
+}
+
+.main-nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__element{
+    font-size: 1.2rem;
+    /* margin-top: 0.25rem; */
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.main-nav__element a{
+    padding: 0.5rem 0.5rem;
+}
+
+.main-nav__element > a:hover,
+.main-nav__element > a:active{
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+
+.footer{
+    background-color: #ccc;
+    margin-top:20px;
+  
+  }
+
+  .navbar-brand__main:hover{
+        color: black !important;
+  }
+
+
+  .main-navbar__container{
+    justify-content: space-between;
+  }
+
+  .btn0{
+    height: 42px;
+    width: 130px;
+  
+ border: none;
+  
+
+    transition: all 0.4s;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+    font-family: inherit;
+   
+}
+.btn0:hover{
+  background-color: rgb(231, 231, 231);
+    transition: all 0.4s;
+  }
+  .btn1{
+
+    width: 130px;
+    border: none;
+    color: black;
+    transition: all 0.4s;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+    font-family: inherit;
+    
+
+  }
+  .btn1:hover{
+    background-color: rgb(231, 231, 231);
+    transition: all 0.4s;
+  
+
+    border: none;
+    outline: none;
+
+  }
+
+  .footer{
+    background-color: #ccc;
+    margin-top:20px;
+  
+  }
+
+
+
+ 
+
+   
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light main-nav main__navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand main-nav__brand navbar-brand__main" href="./index.html">Job-finder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse main-nav__container main-navbar__container" id="navbarNavDropdown">
+              <ul class="navbar-nav main-nav__list">
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./network.html">Network</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./hiring-form.html">Apply</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./stats.html">Stats</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./companies.html">Companies</a>
+                </li>
+                <li class="nav-item main-nav__element">
+                  <a class="nav-link active" aria-current="page" href="./reviews.html">Reviews</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn0">Join Now</button>
+                <button class="btn1 mx-2">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+        <h1 class="titujt " id="title1 ">
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>P</span>
+            <span>A</span>
+            <span>N</span>
+            <span>I</span>
+            <span>E</span>
+            <span>S</span>
+          
+        </h1>
+
+        <p style="text-align: center;font-size: 20px;color: #333;">~FOR YOU,WITH YOU~</p>
+   
+    <div class="slide-container swiper">
+     
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                     
+                       <div class="card-image">
+                        <img class="img" src="assets/logo.png" alt="1">
+                       </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="company-name">Google</h2>
+                        <p class="company-des"> Google is an American multinational technology company focusing  
+                            on search engine technology, online advertising, cloud computing, computer software, 
+                             quantum computing, e-commerce, artificial intelligence, and consumer electronics.
+                           </p>
+                            
+                    </div>
+                  
+                    <a class="readmore-btn" href="https://careers.google.com/jobs/results/">Visit us</a>
+                </div>
+                <!--Card 2-->
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                   
+                     <div class="card-image">
+                      <img class="img" src="assets/logo2.jpg" alt="1">
+                     </div>
+                  </div>
+                  <div class="card-content">
+                      <h2 class="company-name">Quantix</h2>
+                      <p class="company-des">We believe in using an incremental approach in designing, testing and deploying software.
+                         This allows us to efficiently build and quickly bring solutions to market. 
+                         In combining our vast technical experience with your industry expertise, 
+                         we're able to build world class products that are perfectly tailored to your vision. </p>  
+                  </div>
+                
+                  
+                  <a class="readmore-btn" href="https://www.thequantix.com/">Visit us</a>
+              </div>
+              <!--Card 3-->
+              <div class="card swiper-slide">
+               <div class="image-content">
+                
+                  <div class="card-image">
+                   <img class="img" src="assets/logo4.png" alt="1">
+                  </div>
+               </div>
+               <div class="card-content">
+                   <h2 class="company-name">Solaborate</h2>
+                   <p class="company-des"> We are Solaborate, a communication platform company. We believe that reinventing and simplifying communication tools and services represents our greatest opportunity to improve people’s lives and help our planet. Our products empower people to stay connected, improve productivity, and provide better work-life balance. </p>
+                       
+               </div>
+               <a class="readmore-btn" href="https://www.facebook.com/Solaborateopportunities/">Visit us</a>
+           </div>
+           <!--Card 4-->
+           <div class="card swiper-slide">
+            <div class="image-content">
+             
+               <div class="card-image">
+                <img class="img" src="assets/logo5.png" alt="1">
+               </div>
+            </div>
+            <div class="card-content">
+                <h2 class="company-name">VB architecture</h2>
+                <p class="company-des">VB Architecture is a fully qualified architect providing feasibility, design, planning, building regulations and visualization services. </p>
+                    
+            </div>
+            <a class="readmore-btn" href="https://www.vbarchitecture.co.uk/services">Visit us</a>
+        </div>
+        <!--Card 5-->
+        <div class="card swiper-slide">
+         <div class="image-content">
+          
+            <div class="card-image">
+             <img class="img" src="assets/logo6.png" alt="1">
+            </div>
+         </div>
+         <div class="card-content">
+             <h2 class="company-name">Bambus Group</h2>
+             <p class="company-des"> We are an independent company founded in 2014 in Prishtina, the capital of Kosovo. Bambus Group's concept is to enable solutions for market research, data processing, customer care, 3D animation, and innovation. </p>
+                 
+         </div>
+         <a class="readmore-btn" href="https://www.bambusgroup.com/job-opportunities">Visit us</a>
+     </div>
+     <!--Card 6-->
+     <div class="card swiper-slide">
+      <div class="image-content">
+       
+         <div class="card-image">
+          <img class="img" src="assets/logo7.png" alt="1">
+         </div>
+      </div>
+      <div class="card-content">
+          <h2 class="company-name">Pestova</h2>
+          <p class="company-des"> Pestova shpk is a vertically integrated company, which starts from the production of potato seeds, the cultivation of potatoes for consumption and processing, as well as the sale and distribution of potatoes and its products.</p>
+              
+      </div>
+      <a class="readmore-btn" href="https://pestova-ks.com/wp/rrreth-nesh2/">Visit us</a>
+  </div>
+          <!--Card 7-->
+          <div class="card swiper-slide">
+            <div class="image-content">
+             
+               <div class="card-image">
+                <img class="img" src="assets/logo3.png" alt="1">
+               </div>
+            </div>
+            <div class="card-content">
+                <h2 class="company-name">Binni</h2>
+                <p class="company-des">Our company is accompanied by the loatest wood processing technology,
+                  modern trends and international furniture practices.
+                   </p>
+                    
+            </div>
+            <a class="readmore-btn" href="https://www.binni.biz/about/">Visit us</a>
+        </div>
+
+        <!--Card 8-->
+
+        <div class="card swiper-slide">
+         <div class="image-content">
+          
+            <div class="card-image">
+             <img class="img" src="assets/logo8.png" alt="1">
+            </div>
+         </div>
+         <div class="card-content">
+             <h2 class="company-name">Valdrin Sahiti VS</h2>
+             <p class="company-des"> The color combinations and the handmade embroidered crystals, beads, stones and the dangling details, shows the magical vibe of the ancient Goddesses. <br>DREAMAKER </p>
+                 
+         </div>
+         <a class="readmore-btn" href="https://valdrinsahiti.com/">Visit us</a>
+     </div>
+
+     <!--Card 9-->
+     <div class="card swiper-slide">
+      <div class="image-content">
+       
+         <div class="card-image">
+          <img class="img" src="assets/logo10.png" alt="1">
+         </div>
+      </div>
+      <div class="card-content">
+          <h2 class="company-name">WSP</h2>
+          <p class="company-des"> WSP is one of the world's leading engineering professional services firms, with 37000 talented people, based in more than 500 offices, across 40 countries. </p>
+              
+      </div>
+      <a class="readmore-btn" href="https://www.wsp.com/en-us/careers">Visit us</a>
+  </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!--Adding note -->
+    <div class="body_container">
+        <div class="div_note_caption">
+           <h3>YOU WANT TO TAKE NOTES WHILE READING FOR OUR COMPANIES?<br>
+            TAKE IT HERE!!</h3> 
+            <button id="butoni">Take notes</button>
+        </div>
+        <div class="note_container">
+            <input type="text" id="input" placeholder="Write and press enter to add notes">
+     <ul class="ul_"></ul>
+        </div>
+    </div>
+
+    <h4 style="font-size: 30px; margin-top: 100px; text-align: center; color:#333;">Check the table to see which of our companies pays the most</h4>
+
+    <div class="calculation-table">
+        <table>
+            <tr>
+                <th>Company name</th>
+                <th>$ per hour</th>
+                <th>Min hours per day</th>
+                <th>Max hours per day</th>
+                <th>Min $ per day</th>
+                <th>Max $ per day</th>
+                <th>Min $ per week</th>
+                <th>Max $ per week</th>
+                <th>Min $ per month</th>
+                <th>Max $ per month</th>
+            </tr>
+
+            <tr>
+                <td> Google</td>
+                <td>35$</td>
+                <td>10 hours</td>
+                <td>20 hours</td>
+                <td>350$</td>
+                <td>700$</td>
+                <td>2450$</td>
+                <td>4900$</td>
+                <td>9800$</td>
+                <td>19600$</td>
+            </tr>
+            <tr>
+                <td> Solaborate</td>
+                <td>20$</td>
+                <td>8 hours</td>
+                <td>15 hours</td>
+                <td>160$</td>
+                <td>300$</td>
+                <td>1120$</td>
+                <td>2100$</td>
+                <td>4480$</td>
+                <td>8400$</td>
+            </tr>
+            <tr>
+                <td> Quantix</td>
+                <td>10$</td>
+                <td>8 hours</td>
+                <td>-</td>
+                <td>80$</td>
+                <td>-</td>
+                <td>560$</td>
+                <td>-</td>
+                <td>2240$</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td> VB Architecture</td>
+                <td style="text-align: center;" colspan="9">Fixed salary</td>
+            </tr>
+            <tr>
+                <td>Bambus Group</td>
+                <td>3$</td>
+                <td>9 hours</td>
+                <td>24 hours</td>
+                <td>18$</td>
+                <td>72$</td>
+                <td>126$</td>
+                <td>504$</td>
+                <td>504$</td>
+                <td>2016$</td>
+            </tr>
+            <tr>
+                <td> Pestova</td>
+                <td style="text-align: center;" colspan="9">Fixed salary</td>
+            </tr>
+            <tr>
+                <td> Binni</td>
+                <td style="text-align: center;" colspan="9">Fixed salary</td>
+            </tr>
+            <tr>
+                <td> Valdrin Sahiti VS</td>
+                <td style="text-align: center;" colspan="9">Fixed salary</td>
+            </tr>
+            <tr>
+                <td>WSP</td>
+                <td>30$</td>
+                <td>10 hours</td>
+                <td>-</td>
+                <td>300$</td>
+                <td>-</td>
+                <td>2100$</td>
+                <td>-</td>
+                <td>8400$</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+    <!--video-->
+
+    <div class="video__">
+        <video width="700" id="video1" src="assets/company2.mp4"></video>
+        <div class="butons">
+            <button class="butoni" onclick="playPause()">Play/Pause</button> 
+        <button class="butoni" onclick="makeBig()">Big</button>
+        <button class="butoni" onclick="makeSmall()">Small</button>
+        </div>
+
+        <video width="700" id="video2" src="assets/video2.mp4"></video>
+        <div class="butons">
+            <button class="butoni" onclick="playPause1()">Play/Pause</button> 
+        <button class="butoni" onclick="makeBig1()">Big</button>
+        <button class="butoni" onclick="makeSmall1()">Small</button>
+        </div>
+        
+    </div>
+
+
+    <footer class=" text-dark pt-5 pb-4 container-fluid">
+        <div class="footer container-fluid">
+      <div class=" text-center text-md-left"></div>
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">About Us</h5>
+            <hr class="mb-4">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quibusdam quis ipsam dolor,
+              repellendus impedit!</p>
+    
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Lets Us Help</h5>
+            <hr class="mb-4">
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Your Orders</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Manage Your Content And Devices</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Help</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Make Money</h5>
+            <hr class="mb-4">
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Sell Products on Our WEBSITE</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Advertise Your Products</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Become An Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none">Self-Publish</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Contact</h5>
+            <hr class="mb-4">
+            <p>
+              <li class="fas fa-home mr-3"></li> York NY 2333, US</li>
+            </p>
+            <p>
+              <li class="fas fa-envelope mr-3"></li> York NY 2333, US</li>
+            </p>
+            <p>
+              <li class="fas fa-phone mr-3"></li> York NY 2333, US</li>
+            </p>
+            <p>
+              <li class="fas fa-print mr-3"></li> York NY 2333, US</li>
+            </p>
+    
+    
+          </div>
+          <hr class="mb-4">
+          <div class="row d-flex justify-content-center">
+            <div>
+              <p>
+                Copyright 2020 All Right Reserved By:
+                <a href="#" style="text-decoration: none;">
+                  <strong class="text-info">The Providers</strong>
+                </a>
+              </p>
+            </div>
+    
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="text-center">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">
+                <li class="fab fa-facebook"></li></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">
+                <li class="fab fa-twitter"></li></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">
+                <li class="fab fa-google-plus"></li></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">
+                <li class="fab fa-instagram"></li></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     </footer>
+    <script src="swiper-bundle.min.js"></script>
+<script>
+   var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSliude:'true',
+        fade:'true',
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets:true,
+          
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints:{
+         0:{
+            slidesPerView:1,
+         },
+         520:{
+            slidesPerView:2,
+           
+         },
+         950:{
+            slidesPerView:3,
+         },
+        }
+      });
+    </script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+          $('#input').change(function(){
+              var input =$(this).val();
+              $('.ul_').append('<li>'+ input +'<i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>');
+              $(this).val('');
+          });
+          $('ul').on('click','.fa-trash',function(){
+              $(this).parent('li').fadeOut(200);
+
+          });
+          $('ul').on('click','.fa-check',function(){
+              $(this).parent('li').toggleClass('checked');
+
+          });
+      });
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#butoni").click(function(){
+    $("h3").hide();
+    $(".note_container").animate({
+    margin:'100px 400px',
+    width:'600px',
+    height:'700px'
+    });
+    $("#butoni").hide();
+  });
+
+});
+</script>
+
+<script>
+    var myVideo = document.getElementById("video1"); 
+    var myVideo1= document.getElementById("video2"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 800; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 500; 
+} 
+
+function playPause1() { 
+  if (myVideo1.paused) 
+    myVideo1.play(); 
+  else 
+    myVideo1.pause(); 
+} 
+
+function makeBig1() { 
+    myVideo1.width = 800; 
+} 
+
+function makeSmall1() { 
+    myVideo1.width = 500; 
+} 
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+
+</html>
