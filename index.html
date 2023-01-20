@@ -9,52 +9,64 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  
+
   <link rel="stylesheet" href="./css/main.css">
-   
+
 
 </head>
 
+<div id="progressbar"></div>
+<div class="scrollPath"></div>
+<script type="text/javascript">
+  let progress = document.getElementById('progressbar');
+  let totalHeight = document.body.scrollHeight = window.innerHeight;
+  window.onscroll = function () {
+    let progressHeight = (window.pageYOffset /
+      totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+  }
+</script>
+
 <body>
- <!--------------Navbar---------------------------->
- <header>
+  <!--------------Navbar---------------------------->
+  <header>
 
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">Namecompany</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link ">Discover</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">People</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#">Learning
-            </a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Jobs</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <button class="btn0">Join Now</button>
-          <button class="btn1 mx-2">Sing in</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
- <!-------------------------Main--------------------------------->
- 
-    <section class="main">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
+        <a class="navbar-brand" href="#">Namecompany</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link ">My Network</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stats</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Join us
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Company</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn0">Join Now</button>
+            <button class="btn1 mx-2">Sing in</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-------------------------Main--------------------------------->
+
+  <section class="main">
+    <div class="container">
       <div class="row">
         <div class="col">
           <h1>Welcome to your <br> professional community</h1>
@@ -67,16 +79,16 @@
           </div>
         </div>
         <div class="col">
-          <img src="./pictures/assets/svg1.svg">
+          <img class="d-none d-sm-block" src="./pictures/assets/svg1.svg">
         </div>
       </div>
-  </div>
+    </div>
   </section>
 
   <!-------------------------Hero---------------------------->
   <section class="hero container ">
     <div class="card">
-      <div class="image-hero img-one">     
+      <div class="image-hero img-one">
       </div>
       <div class="content">
         <h2><strong>Serach your job</strong></h2>
@@ -88,154 +100,154 @@
       </div>
     </div>
     <div class="card">
-      <div class="image-hero img-two">     
+      <div class="image-hero img-two">
       </div>
       <div class="content">
         <h2><strong>Create profile & apply</strong></h2>
-        <p>To apply within our eCareers system, you will create a Candidate profile which wil 
+        <p>To apply within our eCareers system, you will create a Candidate profile which wil
           save your progress and provide your application status.
-        <br>Once you apply, expect a confirmation email from USPS.</p>
+          <br>Once you apply, expect a confirmation email from USPS.
+        </p>
         <a href="" class="button">Know More</a>
       </div>
     </div>
     <div class="card">
-      <div class="image-hero img-three">     
+      <div class="image-hero img-three">
       </div>
       <div class="content">
         <h2><strong>If required take assessment</strong></h2>
-        <p>USPS will conduct an employment pre-screen and then reach out to youvia email with next steps. Only some positions require an assessment. These details will be noted in the job description.</p>
+        <p>USPS will conduct an employment pre-screen and then reach out to youvia email with next steps. Only some
+          positions require an assessment. These details will be noted in the job description.</p>
         <a href="" class="button">Know More</a>
       </div>
     </div>
 
   </section>
-  
+
   <!----------------------Process------------------------------------>
-  <section class="process ">
+  <section class="process container">
     <div class="container">
-    <div class="row">
-      <div class="col">
-        <img src="./pictures/assets/svg.1.svg">
-        <h3>Connect with people<br>who cane help</h3>
-        <div class="button1">
-        <a href="" >Find people you know</a>
+      <div class="row">
+        <div class="col">
+          <img src="./pictures/assets/svg.1.svg">
+          <h3>Connect with people<br>who cane help</h3>
+          <div class="button1">
+            <a href="">Find people you know</a>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <img src="./pictures/assets/svg.2.svg">
-        <h3>Learn the skills you<br> need to succeed</h3>
-        <div class="button1">
-        <a href="">Choose a topic to learn about</a>
-      </div>
-      </div>
-    </div>
-</div>
-</section>
-
-
-
-<!----------------------------------Form section---------------------------------->
-<section class="form container">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-dark pt-5 pb-4 container">
-        <form class="row g-3">
-          <div class="col-md-6">
-            <label for="inputEmail" class="form-label"><b>Email</b></label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label"><b>Password</b></label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label"><b>Address</b></label>
-            <input type="ad" class="form-control" id="inputAddress" placeholder="">
-          </div>
-       
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label"><b>City</b></label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label"><b>State</b></label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label"><b>Zip</b></label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck"><b>
-                Check me out</b>
-              </label>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btnn">Sign in</button>
-          </div>
-        </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!------------------------------Info--------------------------->
-<script src="./scripts/main.js"></script>
-<section class="info container">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-   
-  <h2 class="d-none d-sm-block">Would you like to be<br> informed more about our site</h2>
-  <p class="d-none d-sm-block">visit our pages</p>
-  
-  
-      </div>
-      <div class="col">
-        <div class="center">
-          <div class="share-menu">
-            <div class="share-btn" onclick="toggleShareMenu()">
-              <i class="fa fa-share-alt"></i>
-              <i class="fa fa-close"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-facebook"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-twitter"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-instagram"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-pinterest"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-codepen"></i>
-            </div>
-            <div class="social-btn">
-              <i class="fab fa-github"></i>
-            </div>
+        <div class="col">
+          <img src="./pictures/assets/svg.2.svg">
+          <h3>Learn the skills you<br> need to succeed</h3>
+          <div class="button1">
+            <a href="">Choose a topic to learn about</a>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 
 
-<!-----------------------Footer------------------------>
-<div class="footer container">
+
+  <!----------------------------------Form section---------------------------------->
+  <section class="form container">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-dark pt-5 pb-4 container">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label"><b>Email</b></label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label"><b>Password</b></label>
+                <input type="password" class="form-control" id="inputPassword4">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label"><b>Address</b></label>
+                <input type="ad" class="form-control" id="inputAddress" placeholder="">
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label"><b>City</b></label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label"><b>State</b></label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label"><b>Zip</b></label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck"><b>
+                      Check me out</b>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btnn">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------------------------Info--------------------------->
+  <script src="./scripts/main.js"></script>
+  <section class="info">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h2 class="d-none d-sm-block">Would you like to be more <br> informed about our site</h2>
+          <p class="d-none d-sm-block">Visit our pages</p>
+        </div>
+        <div class="col">
+          <div class="center">
+            <div class="share-menu">
+              <div class="share-btn" onclick="toggleShareMenu()">
+                <i class="fa fa-share-alt"></i>
+                <i class="fa fa-close"></i>
+              </div>
+              <div class="social-btn">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+              </div>
+              <div class="social-btn">
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="social-btn">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+              <div class="social-btn">
+                <a href="https://www.pinterest.com/" target="_blank"> <i class="fab fa-pinterest"></i></a>
+              </div>
+              <div class="social-btn">
+                <a href=" https://codepen.io/"><i class="fab fa-codepen"></i></a>
+              </div>
+              <div class="social-btn">
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-----------------------Footer------------------------>
+  <div class="footer container">
     <footer class=" text-dark pt-5 pb-4 container">
-      
-    <div class=" text-center text-md-left"></div>
+
+      <div class=" text-center text-md-left"></div>
       <div class="row text-center text-md-left">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
           <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">About Us</h5>
@@ -329,12 +341,15 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
   </div>
 
   </footer>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

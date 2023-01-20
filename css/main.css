@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
 
-*{
-    box-sizing: border-box;
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: "Poppins";
@@ -11,6 +12,8 @@ body{
   font-family: "Poppins";
     margin: 0;
     background: #f8f8f8;
+    padding: 0;
+
 }
 /*navabar*/
 .navbar-brand {
@@ -291,6 +294,7 @@ margin-top:15px;
   height:400px;
   background: rgb(241,241,241);
 background: linear-gradient(90deg, rgba(241,241,241,1) 25%, rgba(241,241,241,1) 72%);
+margin-top: 20px;
 
 }
 .info h2{
@@ -305,7 +309,7 @@ font-size: 2em;
   position:absolute;
  margin-top:200px;
   transform:translate(-50%,-50%);
-  margin-right:50px;
+  margin-left:50px;
   right: 30;
 }
 .share-menu {
@@ -391,7 +395,55 @@ font-size: 2em;
   transition:all 300ms ease-in-out 400ms;
 }
 
+::-webkit-scrollbar{
+  width:0;
+}
+#scrollPath
+{
+  position:fixed;
+  top:0;
+  right:0;
+  width:10px;
+  height:100%;
+  background:rgba(255,255,255,0.05) ;
+}
+#progressbar{
+  position:fixed;
+  top:0;
+  right:0;
+  width:10px;
+  background: linear-gradient(to top,#979797,#252525);
+  animation:animate 5s linear infinite;
+}
+@keyframes animate{
+  0%,100%{
+    filter:hue-rotate(0deg);
+  }
+  50%{
+    filter: hue-rotate(360deg);
+  }
 
+}
+#progressbar:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,#979797,#252525);
+  filter: blur(10px);
+}
+#progressbar:after{
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,#979797,#252525);
+  filter: blur(30px);
+}
 
 
 
