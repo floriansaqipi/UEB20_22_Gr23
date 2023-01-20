@@ -6,6 +6,8 @@
 }
 body{
   background: #f8f8f8;
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar{
@@ -65,6 +67,7 @@ body{
     width:100%;
 }
 .reviews-heading{
+    margin-top: 5rem !important;
     letter-spacing: 1px;
     margin: 30px 0px;
     padding: 10px 20px;
@@ -313,7 +316,7 @@ body{
 ::placeholder{
     font-size: 14px;
 }
-form button{
+.form__button{
     background:#333333;
     color: #fff;
     border-radius: 4px;
@@ -324,7 +327,7 @@ form button{
     display: block;
     margin: 30px auto 10px;
 }
-form button:hover{
+.form__button:hover{
   background:#4b4b4b;
 }
   .statistic-table{
@@ -339,3 +342,17 @@ form button:hover{
   margin-left: 600px;
   margin-top: -525px;
  }
+
+ .main__navbar{
+  background: #fdfdfd !important;
+}
+
+.container__footer{
+  margin: 0;
+  padding: 0;
+}
+
+.container__footer_f{
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
