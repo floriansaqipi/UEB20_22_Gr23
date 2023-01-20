@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+#main-section{
+    background: linear-gradient(to top, rgba(109, 109, 109, 0.6) 10%, transparent),
+    radial-gradient(circle, transparent 90%, rgba(109, 109, 109, 0.6)),
+    url("../pictures/extra/2.jpg") 0% 45% /cover no-repeat border-box, #6d6d6d;
+    width: 100vw;
+    height: 60vh;
+}
+
+#title-section{
+    margin-top: 2rem;
+    text-align: center;
+    color: #6e6e6e
+    
+}
+
+.form-container{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fdfdfd;
+    box-shadow: 2px 2px 20px 5px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+
+.checkbox-container{
+    margin-top: 0.5rem;
+}
+
+.radio-button-container{
+    margin-top: 0.5rem;
+}
+
+.terms-conditons__title{
+    margin-top: 1rem;
+    text-align: center;
+    color: #6d6d6d;
+}
+.terms-condtions__sub-title{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #6d6d6d;
+}
+
+abbr{
+    color: black;
+}
+
+.terms-list{
+    list-style-type: upper-roman;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+}
+
+.terms-sublist__responsibilites{
+    list-style-type: square;
+}
+
+.terms-list li{
+    margin-top: 0.2rem;
+}
+
+.terms-sublist__benefits{
+    list-style-type: circle;
+}
+
+.button-container{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.form__input{
+    background-color: white;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+}
+
+.form__input:focus,
+.form__input:focus-visible,
+.form__input:hover,
+.form__input:active{
+    border: 1px solid #bcbcbc;
+    box-shadow: 1px 1px 2px 3px rgb(0 0 0 / 10%);
+    outline: none;
+    background: #f3f3f3;
+    color: black;
+}
+
+.form__button{
+    background-color: #ebebeb;
+    color: #434343;
+    border: 2px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.error-style{
+    border: 1px solid red;
+    background: #fff4f4;
+}

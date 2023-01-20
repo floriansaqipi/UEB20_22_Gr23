@@ -101,7 +101,7 @@ const setSelectVals = () => {
 
 const removeNonState = () => {
     cards.forEach(card => {
-        if(!stateUsers.find(user => user.id === +card.lastElementChild.innerHTML)){
+        if(!stateUsers.find(user => user.id === parseInt(card.lastElementChild.innerHTML))){
             if(card.parentElement.parentElement == null) {return;}
             card.parentElement.parentElement.removeChild(card.parentElement);
         }
@@ -109,43 +109,43 @@ const removeNonState = () => {
 }
 
 
-const filterLocation = (location) => {
+const filterLocation = (location,removal) => {
     if(location == 'Select Location') {
         return;
     }
     const temp = stateUsers.filter( user => location === user.location);
     stateUsers = temp;
     console.log(stateUsers);
-    removeNonState();
+    removal();
 }
-const filterPositon = (position) => {
+const filterPositon = (position,removal) => {
     if(position == 'Select Position') {
         return;
     }
     const temp = stateUsers.filter( user => position === user.position);
     stateUsers = temp;
-    removeNonState();
+    removal();
 
 }
-const filterWorkEnviornment = (env) => {
+const filterWorkEnviornment = (env,removal) => {
     if(env == 'Select Job type') {
         return;
     }
     const temp = stateUsers.filter( user => env === user.workEnviorment);
     stateUsers = temp;
-    removeNonState();
+    removal();
 
 }
-const filterExperience = (experience) => {
+const filterExperience = (experience,removal) => {
     if(experience == 'Select Experience') {
         return;
     }
     const temp = stateUsers.filter( user => experience === user.experience);
     stateUsers = temp;
-    removeNonState();
+    removal();
 
 }
-const filterEducation = (education) => {
+const filterEducation = (education,removal) => {
     console.log(education);
 
     if(education == 'Select Education') {
@@ -154,7 +154,7 @@ const filterEducation = (education) => {
     const temp = stateUsers.filter( user => education === user.education);
     stateUsers = temp;
     console.log(stateUsers);
-    removeNonState();
+    removal();
 }
 
 
@@ -163,10 +163,10 @@ const filterEducation = (education) => {
 
 const applyFilters = () => {
     setSelectVals();
-    filterLocation(locationSelectVal);
-    filterPositon(positionSelectVal);
-    filterEducation(educationSelectVal);
-    filterExperience(experienceSelectVal);
-    filterWorkEnviornment(workEnviornmentSelectVal);
+    filterLocation(locationSelectVal,removeNonState);
+    filterPositon(positionSelectVal,removeNonState);
+    filterEducation(educationSelectVal,removeNonState);
+    filterExperience(experienceSelectVal,removeNonState);
+    filterWorkEnviornment(workEnviornmentSelectVal,removeNonState);
     render();
 }
