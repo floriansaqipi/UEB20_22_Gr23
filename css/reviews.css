@@ -1,71 +1,12 @@
 *{
-    margin:0px;
-    padding:0px;
-    font-family: poppins;
-    box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+  font-family: poppins;
+  box-sizing: border-box;
 }
-.navbar-brand {
-  font-size: 32px;
-  color: #6e6e6e;
-  margin-left:20px;
-  widht:100%;
-  
-  }
-  .nav-link{
-      color: black;
-  }
-  .nav-link:hover{
-      color: blue;
-      transition: 0.3s;
-  }
-  .nav-item{
-      color: rgb(7,7,78);
-      font-weight: 500;
-      padding-left: 35px;
-    
-  
-  }
-  
-  .btn0{
-      height: 42px;
-      width: 130px;
-    
-   border: none;
-    
-  
-      transition: all 0.4s;
-  
-      border-radius: 20px;
-      box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
-      font-family: inherit;
-     
-  }
-  .btn0:hover{
-    background-color: rgb(246, 246, 246);
-      transition: all 0.4s;
-    }
-    .btn1{
-  
-      width: 130px;
-      border: none;
-      color: black;
-      transition: all 0.4s;
-  
-      border-radius: 20px;
-      box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
-      font-family: inherit;
-      
-  
-    }
-    .btn1:hover{
-      background-color: rgb(246, 246, 246);
-      transition: all 0.4s;
-    
-  
-      border: none;
-      outline: none;
-  
-    }
+body{
+  background: #f8f8f8;
+}
 ::-webkit-scrollbar{
   width:0;
 }
@@ -102,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top,#979797,#252525);
+  background: linear-gradient(to top,#abaaaa,#151515);
   filter: blur(10px);
 }
 #progressbar:after{
@@ -135,7 +76,7 @@
 .reviews-heading h1{
     font-size: 35.2px;
     font-weight: 500;
-    background-color: #202020;
+    background-color:#413f3f;
     color:#ffffff;
     padding: 10px 20px;
 }
@@ -157,10 +98,10 @@
 }
 .reviews-box{
     width:500px;
-    box-shadow: 10px 10px 5px 12px rgba(0,0,0,0.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: #ffffff;
     padding: 20px;
-    margin: 15px;
+    margin: 20px;
     cursor: pointer;
     display: flex;
     
@@ -219,7 +160,11 @@
     transform: translateY(-10px);
     transition: all ease 0.3s;
 }
-
+.c{
+  align-items: center;
+  align-content: center;
+  margin-left: 250px;
+}
 @media(max-width:1060px){
     .reviews-box{
         width:45%;
