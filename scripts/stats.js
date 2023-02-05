@@ -120,14 +120,14 @@ const validateTotalSal = () =>{
 
 const giveSalary = () =>{ 
     const temp = stateEmployees.map(employee => {
-        return new PercentageAdder(employee.salary,salIncPerc).calculatePercentage();
+        return {...employee, salary : new PercentageAdder(employee.salary,salIncPerc).calculatePercentage()};
     });
     stateEmployees = temp;
 }
 
 const updateTable = () => {
     $('.salary-col').each((i,obj)=>{
-        $(obj).html(`${stateEmployees[i].toFixed(2)}`);
+        $(obj).html(`${stateEmployees[i].salary.toFixed(2)}`);
     })
 }
 
