@@ -80,7 +80,7 @@ const validateLastName = () => {
     stateLastName = lastName;
 }
 
-const isUnderAge = (birthday) =>{
+const calcAge = (birthday) =>{
     const date  = new Date(birthday);
     const ageDifMs = Date.now() - date.getTime();
     const ageDate = new Date(ageDifMs); // miliseconds from epoch
@@ -93,7 +93,7 @@ const validateDate = () => {
     if(date == ''){
         failedValidationStyling(dateInput);
         throw 'Date cant be empty'
-    }else if(isUnderAge(date) < 18){
+    }else if(calcAge(date) < 18){
         failedValidationStyling(dateInput);
         throw 'You must be older than 18';
     };
